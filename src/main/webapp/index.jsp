@@ -1,9 +1,10 @@
 <%@page import="com.ipartek.formacion.ejemplos.perrera.Constantes"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Perrera Mobile</title>
 
@@ -39,7 +40,7 @@
 		</div>
 		<div data-role="footer">
 			
-			<a target="_blank" href="/api.jsp">
+			<a target="_blank" href="/can/api.jsp">
 				<img src="/images/logo_small.png">
 				Documentacion Api
 			</a>

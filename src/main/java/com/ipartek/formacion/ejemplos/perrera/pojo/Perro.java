@@ -13,7 +13,7 @@ public class Perro {
 
 	@Id
 	@GeneratedValue
-	private int Id;// clave y se genera automaticamente
+	private int id;// clave y se genera automaticamente
 
 	/* Persistente, un tipo basico (string) */
 	@Basic
@@ -45,11 +45,11 @@ public class Perro {
 	}
 
 	public int getId() {
-		return this.Id;
+		return this.id;
 	}
 
 	public void setId(int id) {
-		this.Id = id;
+		this.id = id;
 	}
 
 	public void setNombre(String nombre) {

@@ -1,9 +1,12 @@
 <%@page import="com.ipartek.formacion.ejemplos.perrera.Constantes"%>
 
+
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
   <title>API perrera</title>
  
   
@@ -36,9 +39,8 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "/service/swagger.json";
+        url = "<%=Constantes.APP_API_DOC_JSON%>";
       }
-
       // Pre load translate...
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
@@ -57,15 +59,12 @@
               scopeSeparator: ","
             });
           }
-
           if(window.SwaggerTranslator) {
             window.SwaggerTranslator.translate();
           }
-
           $('pre code').each(function(i, e) {
             hljs.highlightBlock(e)
           });
-
           addApiKeyAuthorization();
         },
         onFailure: function(data) {
@@ -75,7 +74,6 @@
         apisSorter: "alpha",
         showRequestHeaders: false
       });
-
       function addApiKeyAuthorization(){
         var key = encodeURIComponent($('#input_apiKey')[0].value);
         if(key && key.trim() != "") {
@@ -84,17 +82,13 @@
             log("added key " + key);
         }
       }
-
       $('#input_apiKey').change(addApiKeyAuthorization);
-
       // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
       /*
         var apiKey = "myApiKeyXXXX123456789";
         $('#input_apiKey').val(apiKey);
       */
-
       window.swaggerUi.load();
-
       function log() {
         if ('console' in window) {
           console.log.apply(console, arguments);

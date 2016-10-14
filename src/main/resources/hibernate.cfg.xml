@@ -6,9 +6,9 @@
 	<session-factory>
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://127.13.11.130/can</property><!-- Nombre de la BBDD -->
-		<property name="connection.username">adminf2DVgxD</property>
-		<property name="connection.password">AtEhJyTkYHnq</property>
+		<property name="connection.url">jdbc:mysql://localhost/can</property><!-- Nombre de la BBDD -->
+		<property name="connection.username">root</property>
+		<property name="connection.password"/>
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
 		<!-- SQL dialect -->
@@ -20,7 +20,8 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 		<!-- Drop and re-create the database schema on startup -->
-		<property name="hbm2ddl.auto">update</property><!-- Cuidado con esta linea cada vez crea, por que estamos en local -->
+		<property name="hbm2ddl.auto">create</property><!-- Cuidado con esta linea cada vez crea, por que estamos en local -->
+		
 		<mapping class="com.ipartek.formacion.ejemplos.perrera.pojo.Perro" /><!-- poner las clases que queramos -->
 	</session-factory>
 </hibernate-configuration>
