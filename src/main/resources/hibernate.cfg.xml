@@ -22,6 +22,7 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property><!-- Cuidado con esta linea cada vez crea, por que estamos en local -->
 		
-		<mapping class="com.ipartek.formacion.ejemplos.perrera.pojo.Perro" /><!-- poner las clases que queramos -->
+		<mapping class="com.ipartek.formacion.ejemplos.perrera.pojo.Perro" />
+		<mapping class="com.ipartek.formacion.ejemplos.perrera.pojo.Empleado" /><!-- poner las clases que queramos -->
 	</session-factory>
 </hibernate-configuration>
